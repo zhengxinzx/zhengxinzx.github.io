@@ -3,6 +3,8 @@ title: PaperMod
 paginate: 5
 theme: paperMod
 
+publishDir: ./docs
+
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false

@@ -1,0 +1,41 @@
+baseURL: https://zhengxinzx.github.io/
+languageCode: en-us
+title: zhengxin's Blog
+theme: mini
+paginate: 6
+publishDir: docs
+
+hasCJKLanguage: true
+permalinks:
+  posts: /posts/:title/
+
+markup:
+  highlight:
+    guessSyntax: true
+    style: emacs
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+  goldmark:
+    renderer:
+      unsafe: true
+
+
+social:
+  github: https://github.com/zhengxinzx
+  twitter: https://github.com/zhengxinzx
+  stackoverflow: https://stackoverflow.com/users/22720869/zhengxin
+
+
+params:
+  author: zhengxin
+  bio: Software Engineer
+  description: My Blog to share interesting things
+  enableRSS: true
+  enableComments: false
+  enableEmoji: true
+  enableGoogleAnalytics: true
+  showToc: true
+  showPowerBy: false
+  copyright: © Copyright 2023 ❤️ zhengxin

@@ -1,13 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>All Posts - My Hugo FixIt Site</title>
+    <title>All Posts - </title>
     <link>http://zhengxinzx.github.io/posts/</link>
-    <description>All Posts | My Hugo FixIt Site</description>
-    <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 11 Oct 2023 12:02:39 &#43;0800</lastBuildDate><atom:link href="http://zhengxinzx.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <description>All Posts | </description>
+    <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>xin.zheng.0459@outlook.com (zhengxin)</managingEditor>
+      <webMaster>xin.zheng.0459@outlook.com (zhengxin)</webMaster><lastBuildDate>Wed, 11 Oct 2023 12:02:39 &#43;0800</lastBuildDate><atom:link href="http://zhengxinzx.github.io/posts/" rel="self" type="application/rss+xml" /><item>
   <title>First_post</title>
   <link>http://zhengxinzx.github.io/posts/first_post/</link>
   <pubDate>Wed, 11 Oct 2023 12:02:39 &#43;0800</pubDate>
-  <author>Author</author>
+  <author>zhengxin</author>
   <guid>http://zhengxinzx.github.io/posts/first_post/</guid>
   <description><![CDATA[]]></description>
 </item>

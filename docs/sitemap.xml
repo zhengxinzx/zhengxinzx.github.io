@@ -2,52 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://zhengxinzx.github.io/tags/kubernetes/</loc>
+    <lastmod>2023-10-11T21:01:13+08:00</lastmod>
+  </url><url>
+    <loc>https://zhengxinzx.github.io/posts/kubernetes-client-go-overview/</loc>
+    <lastmod>2023-10-11T21:01:13+08:00</lastmod>
+  </url><url>
+    <loc>https://zhengxinzx.github.io/posts/</loc>
+    <lastmod>2023-10-11T21:01:13+08:00</lastmod>
+  </url><url>
+    <loc>https://zhengxinzx.github.io/tags/</loc>
+    <lastmod>2023-10-11T21:01:13+08:00</lastmod>
+  </url><url>
+    <loc>https://zhengxinzx.github.io/tags/tech/</loc>
+    <lastmod>2023-10-11T21:01:13+08:00</lastmod>
+  </url><url>
+    <loc>https://zhengxinzx.github.io/</loc>
+    <lastmod>2023-10-11T21:01:13+08:00</lastmod>
+  </url><url>
     <loc>https://zhengxinzx.github.io/about/</loc>
     <lastmod>2023-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zhengxinzx.github.io/</loc>
-    <lastmod>2023-10-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://zhengxinzx.github.io/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/posts/markdown-syntax-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/posts/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/posts/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/posts/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zhengxinzx.github.io/posts/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url>
 </urlset>

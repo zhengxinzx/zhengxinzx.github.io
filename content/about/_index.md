@@ -1,26 +1,20 @@
 +++
 title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
-enableComments = false
+description = "What is this blog for"
+date = "2023-10-11"
+author = "zhengxin"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hello and welcome! I'm zhengxin, a software engineer with a passion for technology and innovation. This blog is my space to share insights, experiences, and lessons I've learned from my journey in the world of computer science and my daily life.
 
-Hugo makes use of a variety of open source projects including:
+With a deep-seated interest in software development, I've been fortunate to work on various challenging and rewarding projects. Each experience has imparted valuable knowledge, and through this blog, I aim to share these learnings with fellow tech enthusiasts and curious minds alike. Whether you're a budding software engineer, a seasoned developer, or someone with a general interest in technology, I hope you find the content here both enlightening and engaging.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+In addition to technical discussions, I occasionally delve into my day-to-day experiences, reflections, and general musings. After all, life isn't just about code, and I believe in the importance of a well-rounded perspective.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+I encourage open dialogue and welcome constructive feedback on my posts. Collaboration and knowledge-sharing are the cornerstones of growth in our field, and I'm always eager to connect with like-minded individuals.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+If you'd like to reach out for any reason – be it a question, suggestion, or just to say hello – please don't hesitate to email me at [xin.zheng.0459@outlook.com](xin.zheng.0459@outlook.com).
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+For a deeper dive into my projects and technical contributions, I invite you to visit my GitHub profile: [https://github.com/zhengxinzx](https://github.com/zhengxinzx).
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Thank you for stopping by, and happy reading!

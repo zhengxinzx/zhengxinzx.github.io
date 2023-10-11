@@ -12,7 +12,7 @@ permalinks:
 markup:
   highlight:
     guessSyntax: true
-    style: emacs
+    style: github
   tableOfContents:
     endLevel: 3
     ordered: false

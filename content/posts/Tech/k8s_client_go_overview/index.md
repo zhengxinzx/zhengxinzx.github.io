@@ -6,6 +6,11 @@ tags = [
   "Tech",
   "Kubernetes",
 ]
+keywords = [
+  "Kubernetes",
+  "client-go",
+  "code reading",
+]
 +++
 
 ## client-go Introduction

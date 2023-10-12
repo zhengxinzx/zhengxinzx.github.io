@@ -13,7 +13,7 @@
       <pubDate>Wed, 11 Oct 2023 21:01:13 +0800</pubDate>
       
       <guid>https://zhengxinzx.github.io/posts/kubernetes-client-go-overview/</guid>
-      <description>client-go Introduction 🔗client-go is the official Go client library for Kubernetes. It provides a set of Go packages that implement the Kubernetes API concepts. It&amp;rsquo;s a powerful library that can be used to interact with the Kubernetes API. Almost all the kubectl commands and operators in Kubernetes are implemented using client-go.
+      <description>client-go Introduction client-go is the official Go client library for Kubernetes. It provides a set of Go packages that implement the Kubernetes API concepts. It&amp;rsquo;s a powerful library that can be used to interact with the Kubernetes API. Almost all the kubectl commands and operators in Kubernetes are implemented using client-go.
 Instead of being a simply REST HTTP client, client-go has the capability to cache the Kubernetes API objects in memory, so that users can get the objects from the cache directly without sending requests to the Kubernetes API server frequently.</description>
     </item>
     

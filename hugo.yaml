@@ -31,7 +31,7 @@ social:
 params:
   author: zhengxin
   bio: Software Engineer
-  description: My Blog to share interesting things
+  description: zhengxin's Blog to share interesting things
   enableRSS: true
   enableComments: false
   enableEmoji: true

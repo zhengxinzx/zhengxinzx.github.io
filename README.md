@@ -11,3 +11,4 @@ Add new doc/page:
 ```bash
 hugo new docs/my-new-doc.md
 ```
+

@@ -2,12 +2,18 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["gh-pages"]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    branches:
+      - gh-pages
+
+  # only run after the publish workflow has completed
+  workflow_run:
+    workflows: ["publish markdown to static files"]
+    types:
+      - completed
+    branches:
+      - gh-pages
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:

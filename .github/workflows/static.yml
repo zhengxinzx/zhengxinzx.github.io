@@ -5,9 +5,12 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  push:
-    branches:
-      - gh-pages
+  # Only run after " Publish markdown to static files" workflow successfully completes
+  workflow_run:
+    workflows: 
+      - "Publish markdown to static files"
+    types:
+      - completed
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -31,6 +34,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          branches: gh-pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

@@ -6,7 +6,7 @@ theme = "hugo-book"
 
 [menu]
 [[menu.before]]
-  name = "GitHub"
+  name = "GitHub 🔗"
   url = "https://github.com/zhengxinzx"
 
 [params]

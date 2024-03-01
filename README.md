@@ -12,3 +12,4 @@ Add new doc/page:
 hugo new docs/my-new-doc.md
 ```
 
+

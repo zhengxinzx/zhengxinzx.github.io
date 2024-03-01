@@ -1,4 +1,4 @@
-name: publish markdown to static files
+name: Publish markdown to static files
 
 on:
   workflow_dispatch:

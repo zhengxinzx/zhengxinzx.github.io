@@ -11,6 +11,6 @@ theme = "hugo-book"
 
 [params]
   BookTheme = 'auto'
-  BookFavicon = 'favicon.ico'
+  BookFavicon = 'favicon.png'
   BookLogo = 'avatar.png'
   BookRepo = 'https://github.com/zhengxinzx/zhengxinzx.github.io'

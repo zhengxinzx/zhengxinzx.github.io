@@ -1,0 +1,16 @@
+baseURL = 'https://zhengxinzx.github.io'
+languageCode = 'en-us'
+title = 'zhengxin'
+
+theme = "hugo-book"
+
+[menu]
+[[menu.before]]
+  name = "GitHub"
+  url = "https://github.com/zhengxinzx"
+
+[params]
+  BookTheme = 'auto'
+  BookFavicon = 'favicon.ico'
+  BookLogo = 'avatar.png'
+  BookRepo = 'https://github.com/zhengxinzx/zhengxinzx.github.io'

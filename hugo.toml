@@ -22,6 +22,11 @@ name = "GitHub"
 icon = "github"
 url = "https://github.com/zhengxinzx"
 
+[[params.social]]
+name = "Mail"
+icon = "mail"
+url = "mailto:xin.zheng.0459@outlook.com"
+
 [[menu.main]]
 name = "Home"
 url = "/"

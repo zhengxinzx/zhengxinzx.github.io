@@ -1,16 +1,38 @@
-baseURL = 'https://zhengxinzx.github.io'
-languageCode = 'en-us'
-title = 'zhengxin'
-
-theme = "hugo-book"
-
-[menu]
-[[menu.before]]
-  name = "GitHub 🔗"
-  url = "https://github.com/zhengxinzx"
+baseURL = "https://zhengxin.info"
+languageCode = "en-us"
+title = "zhengxin"
+theme = "archie"
+copyright = "© zhengxin"
+pygmentsstyle = "lovelace"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+paginate = 10
 
 [params]
-  BookTheme = 'auto'
-  BookFavicon = 'favicon.png'
-  BookLogo = 'avatar.png'
-  BookRepo = 'https://github.com/zhengxinzx/zhengxinzx.github.io'
+favicon = "https://raw.githubusercontent.com/zhengxinzx/images/main/20240303214631.png"
+og_image = "https://raw.githubusercontent.com/zhengxinzx/images/main/20240303214631.png"
+# mode = "auto"
+mode = "toggle"
+useCDN = true
+subtitle = "Share thoughts and experiences"
+description = "zhengxin's blog"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/zhengxinzx"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Blogs"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3

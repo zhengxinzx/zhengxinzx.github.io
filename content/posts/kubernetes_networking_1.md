@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes networking | Network Namespace, veth and bridge"
+title: "Kubernetes networking: network namespace, veth pair and bridge"
 date: 2024-04-06
 description: "This post will explain the fundamental concepts involved in Kubernetes networking, including network namespace, veth, and bridge."
 tags: [Kubernetes, Networking]

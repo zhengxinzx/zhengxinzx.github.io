@@ -194,8 +194,6 @@ for i in $(seq 1 10); do curl 10.0.0.40; done
 <html><head><title>HTTP Hello World</title></head><body><h1>Hello from server2</h1></body></html
 ```
 
-## Exploring further
-
 ## Exploring Further
 
 The post presents a snapshot of `iptables` capabilities, especially in setting up a virtual IP. Should your curiosity be piqued and you're keen to delve deeper into the world of iptables, I highly suggest exploring additional materials to bolster your understanding:

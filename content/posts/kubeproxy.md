@@ -1,79 +1,39 @@
 ---
-title: "Kube-proxy Explained with demo on Azure Kubernetes Service"
+title: "Kube-proxy and CNI plugin: What's the difference?"
 date: 2024-05-03
-description: ""
+description: "Explain the difference between kube-proxy and CNI plugin, and describe how kube-proxy works briefly."
 tags: [Networking, Kubernetes]
 ---
 
-When I first touched Kubernetes, I can understand that there are master components like API server, scheduler, etc. and worker components, which is kubelet. However, I was confused about kube-proxy and the concept of CNI plugin: Why do we still need kube-proxy when we already have CNI plugin? Should not the CNI plugin be responsible for the proxying network packet among pods?
+Understanding the components of a Kubernetes cluster is generally straightforward, as their names tend to hint at their functions, like *scheduler*. Nevertheless, the presence of kube-proxy alongside the CNI plugin within Kubernetes' networking architecture initially left me confused. My questions are:
 
-To answer these questions, we need to explain what is kube-proxy and how it works.
+- What are the differences between kube-proxy and the CNI plugin?
+- Are they optional in a Kubernetes cluster?
 
-## What is Kube-proxy
+To address these inquiries, it's important to delve into the of Kubernetes' networking model and how kube-proxy works.
 
-Kube-proxy is a process that runs on each worker node in the cluster. It can be hosted by a DaemonSet, or simply a process running on the node. Kube-proxy plays the role as a network rule configurator, which set up the network rule on the node, so that the network packet sent to/from the node can be routed to the correct pod. Based on these rules, Kubernetes provides the concept of service, which maps a virtual IP to a set of pods.
+![20240504174641](https://raw.githubusercontent.com/zhengxinzx/images/main/picgo20240504174641.png)
 
-The difference between CNI plugin and kube-proxy is quite straightforward: CNI plugin solves the problem of how to build connection between pods, and kube-proxy solves the problem of which pod a network packet should be sent to.
+Kube-proxy is a process that runs on each worker node in the cluster. It can be deployed as a DaemonSet or a standalone process directly running on the host.
 
-> Kube-proxy is not strictly required for a kubernetes cluster. In Amazon EKS (Elastic Kubernetes Service), kube-proxy is an optional add-on. In fact, some CNI plugin are able to provide the same functionality as kube-proxy, such as Cilium.
+When a service object is created, an endpoints object is created automatically, which contains the IP addresses of the pods that the service is targeting. The service is assigned with a virtual IP address that does not belongs to any pod.
 
-## How it works
+kube-proxy listens for the service and endpoints objects from the API server, and create network rules on the node, so that the packets sent to the virtual IP of the service will be routed to one of the pods in the endpoints object.
 
-When a service, for example a ClusterIP service, is created in the kubernetes cluster, 
+Depends on how the kube-proxy is configured, it can use iptables, ipvs, or nftables to create the network rules. The default mode is iptables nowadays, and you can find my previous post about iptables at [Iptables explore, implement virtual IP](./iptables.md).
 
-1. A virtual IP as assigned with the service. The virtual IP does not belong to any pod.
-2. An endpoints object is created, which contains the IP addresses of the pods that the service is targeting.
+> The iptables mode is being challenged when there are large number of services in the cluster, since the iptables rules are evaluated in sequence, which can make the kernel quite busy. The ipvs mode is more efficient in this case, since it uses a hash table to find the correct pod to route the packet to.
 
-On every worker node, kube-proxy listen for the changes/addition/deletion of endpoints object, and create network rules based on iptables/ipvs/nftables so that the network packet sent to the virtual IP will be sent to one of the IP addresses in the endpoints object. The virtual IP appears like a real IP address to the sender, where the packet was sent to a backend pod.
+On the other side, the CNI plugin is responsible for the pod-to-pod communication. It guarantees that each pod is assigned with a unique IP address, and pod can communicate with each other using the IP address without NAT, through technologies like VXLAN or BGP.
 
-**The kube-proxy itself does not handle any network packet**.
+However, the functional boundaries between the two are becoming increasingly blurred, as the CNI plugins are trying to enhance their capabilities to provide the virtual IP support, like Cilium, as described in [Kubernetes Without kube-proxy](https://docs.cilium.io/en/stable/network/kubernetes/kubeproxy-free/#kubernetes-without-kube-proxy). Given that they furnish the cluster's network infrastructure, supporting virtual IPs is not a challenging task.
 
-Today, the default mode of kube-proxy is iptables. You can find my post about iptables at [Iptables explore, implement virtual IP](./iptables.md).
+So the answer to the 2 questions are now straightforward:
 
-## Demo
+- Kube-proxy and the CNI plugin serve different functions; however, the CNI plugin has the capability to replace the kube-proxy.
+- Kube-proxy is not an indispensable component within a cluster. For instance, in Amazon EKS, it is considered an optional add-on. On the other hand, the use of a CNI plugin is essential, as you must select one to facilitate pod-to-pod communication within the cluster.
 
-Nothing can explain better than a real demo, and let's see how kube-proxy works on setting up the iptables rules.
+If you want to know more about kube-proxy, I'd like to recommend the following blogs:
 
-In this demo, I will use an Azure Kubernetes Cluster (AKS) with two nodes, the cluster is configured to use the Azure CNI plugin.
-
-### Preparation
-
-## ClusterIP
-
-## NodePort
-
-## Setup
-
-```shell
-❯ kubectl get nodes
-NAME                                STATUS   ROLES   AGE     VERSION
-aks-agentpool-39551181-vmss000000   Ready    agent   4m19s   v1.28.5
-aks-agentpool-39551181-vmss000001   Ready    agent   4m12s   v1.28.5
-
-kubectl debug node/aks-agentpool-39551181-vmss000000 -it --image=ubuntu
-
-apt install libcap2-bin iptables
-
-setcap CAP_NET_RAW,CAP_NET_ADMIN+ep /usr/sbin/xtables-nft-multi
-
-kubectl debug node/aks-agentpool-39551181-vmss000000 -it `
---image=ubuntu `
---overrides='{
-  "apiVersion": "v1",
-  "kind": "Pod",
-  "spec": {
-    "containers": [
-      {
-        "name": "debug-container",
-        "image": "ubuntu",
-        "securityContext": {
-          "capabilities": {
-            "add": ["NET_ADMIN"]
-          }
-        }
-      }
-    ]
-  }
-}'
-
-```
+- [Aks Networking Iptables in AKS](https://www.stevegriffith.nyc/posts/aks-networking-iptables/) explains how the iptables rules are configured in an AKS cluster.
+- [Demystifying kube-proxy](https://mayankshah.dev/blog/demystifying-kube-proxy/) is a systematic introduction to kube-proxy.

@@ -20,7 +20,7 @@ When a service object is created, an endpoints object is created automatically, 
 
 kube-proxy listens for the service and endpoints objects from the API server, and create network rules on the node, so that the packets sent to the virtual IP of the service will be routed to one of the pods in the endpoints object.
 
-Depends on how the kube-proxy is configured, it can use iptables, ipvs, or nftables to create the network rules. The default mode is iptables nowadays, and you can find my previous post about iptables at [Iptables explore, implement virtual IP](./iptables.md).
+Depends on how the kube-proxy is configured, it can use iptables, ipvs, or nftables to create the network rules. The default mode is iptables nowadays, and you can find my previous post about iptables at [Iptables explore, implement virtual IP](https://zhengxin.online/posts/iptables/).
 
 > The iptables mode is being challenged when there are large number of services in the cluster, since the iptables rules are evaluated in sequence, which can make the kernel quite busy. The ipvs mode is more efficient in this case, since it uses a hash table to find the correct pod to route the packet to.
 

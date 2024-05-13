@@ -1,8 +1,8 @@
 ---
-title: "[Paper Reading] Conveyor: Continuous Deployment at Meta"
+title: "[White Paper Reading] Conveyor: Continuous Deployment at Meta"
 date: 2024-05-05
 description: "A paper reading on the continuous deployment system at Meta, which is called Conveyor."
-tags: [Paper Reading, Continuous Deployment]
+tags: [White Paper Reading, Continuous Deployment]
 ---
 
 Meta has released a paper titled [Conveyor: One-Tool-Fits-All Continuous Software Deployment at Meta](https://www.usenix.org/system/files/osdi23-grubic.pdf), which offers an in-depth look at the company's state-of-the-art continuous deployment system, Conveyor. This system is integral to Meta's operations, deploying containers over an immense scale across millions of machines.
